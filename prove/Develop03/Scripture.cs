@@ -1,28 +1,30 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Console;
-using System.IO;
-using System.Collections;
+using System.Security.Cryptography.X509Certificates;
 
 namespace ScriptureMemorizer
 {
-    class Scripture
+    public class Scripture
     {
+        
         public string _reference;
         public List<Word> _words = new List<Word>();
 
-        private void Scriptures()
+        public void GetDisplayText()
         {
+            foreach (Word verse in _words)
+        {
+            verse.GetDisplayText();
+        }
 
         }
-        private void HideRandomWords()
+        public void Scriptures()
         {
-            WriteLine("");
             
+            Console.WriteLine(_reference);
         }
+        //private void HideRandomWords()
+       // {}
     }
+    
 
 }

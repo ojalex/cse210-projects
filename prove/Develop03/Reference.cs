@@ -16,10 +16,10 @@ namespace ScriptureMemorizer
         public int _verse;
         public int _endVerse; 
 
-        private void GetDisplayText()
+        public void GetDisplayText()
         {
-            WriteLine($"{_book} {_chapter} {_verse}");
-            WriteLine($"{_book} {_chapter} {_verse}-{_endVerse}");
+            WriteLine($"{_book} {_chapter}:{_verse}");
+            WriteLine($"{_book} {_chapter}:{_verse}-{_endVerse}");
         }
     }
 }
